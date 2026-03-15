@@ -183,9 +183,9 @@ public class EstructuraDatos {
                         System.out.println("ingrese el precio");
                         double precio = entrada.nextDouble();
                         System.out.println("Ingrese la cantidad de producto");
-                        int cantidad = entrada.nextInt();
-                        double resultado = precio * cantidad;
-                        compra += resultado;
+                        int cantProducto = entrada.nextInt();
+                        double subtotal = precio * cantProducto;
+                        compra = subtotal;
                     }
                     System.out.println("El total de la compra es:" + compra);
 
