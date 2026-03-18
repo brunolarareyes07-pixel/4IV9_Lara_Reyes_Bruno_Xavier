@@ -276,13 +276,33 @@ public class EstructuraDatos {
 
                 break;
             case 7:
+                //quiero dejarles una tabla de multiplicar
+                //deberan de darle formato y titulos a cada columna
+                for(int n = 1; n <= 10; n++){
+                    System.out.println("| " + n + "|" + " " + "|"+ (n*10 + "|" + "" + (n*100) + "|" + " " + (n*1000)+ "|"));
+                }
                 
                 break;
             case 8:
                 
                 break;
             case 9:
-                
+                System.out.println("Camos a realizar el dibujo en un cuadrado magico");
+                System.out.println("Infrese le tamaño de su cuadrado ");
+                int n1=entrada.nextInt();
+
+                if(n1 >=1 && n1 <=20){
+                    //se imprime
+                    System.out.println(" 1 ");
+                    for(int j = 1; j<=n1; j++){
+                        System.out.println("*");
+                        
+                    }
+                    System.out.println("");
+                }else{System.out.println("Por favor solo ingrese valores entre el 1 y el 20 ");
+                break;
+
+                }
                 break;
             case 10:
                 
