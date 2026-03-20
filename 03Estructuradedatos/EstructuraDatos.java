@@ -282,8 +282,88 @@ public class EstructuraDatos {
                 }
 
                 break;
+                case 7:
+                    System.out.println("Tabla de multiplicar");
+                    System.out.println("Ingresa el numero base de la tabla");
+                    int numeroTabla = entrada.nextInt();
+                    System.out.println("Ingresa hasta que multiplicador quieres llegar");
+                    int limiteTabla = entrada.nextInt();
 
+                    if (limiteTabla < 1) {
+                    System.out.println("El limite debe ser mayor o igual a 1");
+                } else {
+                    for (int i = 1; i <= limiteTabla; i++) {
+                    System.out.println(numeroTabla + " x " + i + " = " + (numeroTabla * i));
+                }
+                }
+                break;
 
+                case 8:
+                    System.out.println("Ingresa un numero entero entre 0 y 20");
+                    int numeroFactorial = entrada.nextInt();
+
+                    if (numeroFactorial < 0) {
+                    System.out.println("El factorial no existe para numeros negativos");
+                    } else if (numeroFactorial > 20) {
+                    System.out.println("El numero es demasiado grande para un resultado exacto en tipo long");
+                    } else {
+                    System.out.println("El factorial de " + numeroFactorial + " es: " + factorial(numeroFactorial));
+                    }
+                    break;
+
+                case 9:
+                    System.out.println("Vamos a realizar el dibujo de un cuadrado magico");
+                    System.out.println("Ingrese el tamaño del cuadrado");
+                    int n1 = entrada.nextInt();
+
+                    if (n1 >= 1 && n1 <= 20) {
+                    for (int i = 1; i <= n1; i++) {
+                    for (int j = 1; j <= n1; j++) {
+                    System.out.print(" * ");
+                    }
+                        System.out.println("");
+                    }
+                    } else {
+                        System.out.println("El tamaño debe estar entre 1 y 20");
+                    }
+                break;
+
+                case 10:
+                    System.out.println("Figura hueca");
+                    System.out.println("1.- Cuadrado hueco");
+                    System.out.println("2.- Rectangulo hueco");
+                        int opcionFiguraHueca = entrada.nextInt();
+
+                    switch (opcionFiguraHueca) {
+                        case 1:
+                        System.out.println("Ingresa el lado del cuadrado");
+                        int ladoCuadradoHueco = entrada.nextInt();
+
+                        if (ladoCuadradoHueco < 2) {
+                        System.out.println("El lado debe ser mayor o igual a 2");
+                            } else {
+                        dibujarRectanguloHueco(ladoCuadradoHueco, ladoCuadradoHueco);
+                        }
+                            break;
+
+                        case 2:
+                        System.out.println("Ingresa el ancho del rectangulo");
+                        int anchoRectanguloHueco = entrada.nextInt();
+                        System.out.println("Ingresa el alto del rectangulo");
+                        int altoRectanguloHueco = entrada.nextInt();
+
+                        if (anchoRectanguloHueco < 2 || altoRectanguloHueco < 2) {
+                            System.out.println("El ancho y el alto deben ser mayores o iguales a 2");
+                        } else {
+                            dibujarRectanguloHueco(anchoRectanguloHueco, altoRectanguloHueco);
+                        }
+                        break;
+
+                        default:
+                        System.out.println("Opcion de figura no valida");
+                break;
+    }
+    break;
             case 11:
                 System.out.println("Patrones disponibles:");
                 System.out.println("1.- Triangulo rectangulo");
