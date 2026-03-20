@@ -34,10 +34,10 @@ public class EstructuraDatos {
         System.out.println("4.- Realizar un programa para contar el numero de positivos y negativos de una serie de numeros"); 
         System.out.println("5.- Desarrolar ua tiendita para agregar productos y precios");   
         System.out.println("6.- Desarrollar un programa para calcular el area y peri,etro de 5 diferentes figuras");   
-        System.out.println("7.- Desarrollar una tabla de multiplicar");   
-        System.out.println("8.- Desarrollar un programa para calcular el factorial con recursividad");   
-        System.out.println("9.- Dibujar un triangulo o un rombo");      
-        System.out.println("10.- Desarrollar una figura hueca");   
+        System.out.println("7.-Dessarrollaruna tabla ahorita a ver de que se me ocurre");   
+        System.out.println("8- Desarrollar un programa para calcular el factorial con recursividad ");   
+        System.out.println("9-Vamos hacer dibujitos wiiii");      
+        System.out.println("10.- Dessarrollar una figura hueca");   
         System.out.println("11.- Realizar algunos patrones");   
         System.out.println("12.- Realizae un diamante");   
         System.out.println("13.- Dessarrolar una calculadora basica");   
@@ -118,7 +118,7 @@ public class EstructuraDatos {
                 double resultado;
                 switch (opciontemperatura) {
                     case 1:
-                        resultado = (temperatura * 9.0/5.0) + 32.0;
+                        resultado = temperatura * 9.0/5.0 + 32;
                         System.out.println("La temperatura es: " + resultado );
                         break;
                     case 2: 
@@ -142,13 +142,13 @@ public class EstructuraDatos {
                         System.out.println("La temperatura es: " + resultado);
                         break;
                     default:
-                        System.out.println("Opción de temperatura no válida");
+                        System.out.println("Opcion de temperatura no valida");
                         break;
                 }
 
                 break;
             case 4:
-                System.out.println("Ingresa un numero");
+                System.out.println("Ingresa la cantidad de numeros a evaluar");
                 int cantidad = entrada.nextInt();
 
                 int negativos = 0;
@@ -161,15 +161,20 @@ public class EstructuraDatos {
                         double numero = entrada.nextDouble();
                         
                         if (numero > 0){
-                            positivos = positivos + 1;
+                            positivos++;
                         }
                         else if (numero < 0){
-                            negativos = negativos + 1;
+                            negativos++;
                         }
                         else {
                             ceros = ceros + 1;
                         }
                     }
+                    System.out.println("Cantidad de positivos: " + positivos);
+                    System.out.println("Cantidad de negativos: " + negativos);
+                    System.out.println("Cantidad de ceros: " + ceros);
+                } else {
+                    System.out.println("La cantidad debe ser mayor a 0");
                 }
                 break;
             case 5:
@@ -187,9 +192,9 @@ public class EstructuraDatos {
                         System.out.println("Ingrese la cantidad de producto");
                         int cantProducto = entrada.nextInt();
                         double subtotal = precio * cantProducto;
-                        compra = subtotal;
+                        compra += subtotal;
                     }
-                    System.out.println("El total de la compra es:" + compra);
+                    System.out.println("El total de la compra es: " + compra);
 
                 }else{
                     System.out.println("ingrese solo cantidades positivas");
@@ -277,139 +282,53 @@ public class EstructuraDatos {
                 }
 
                 break;
-            case 7:
-<<<<<<< HEAD
-                System.out.println("Tabla de multiplicar");
-                System.out.println("Ingresa el numero base de la tabla");
-                int numeroTabla = entrada.nextInt();
-                System.out.println("Ingresa hasta que multiplicador quieres llegar");
-                int limiteTabla = entrada.nextInt();
 
-                if (limiteTabla < 1) {
-                    System.out.println("El limite debe ser mayor o igual a 1");
-                } else {
-                    for (int i = 1; i <= limiteTabla; i++) {
-                        System.out.println(numeroTabla + " x " + i + " = " + (numeroTabla * i));
-                    }
-                }
-=======
-                //quiero dejarles una tabla de multiplicar
-                //deberan de darle formato y titulos a cada columna
-                for(int n = 1; n <= 10; n++){
-                    System.out.println("| " + n + "|" + " " + "|"+ (n*10 + "|" + "" + (n*100) + "|" + " " + (n*1000)+ "|"));
-                }
-                
->>>>>>> b97aa648ed065f6ee6df5e4773657911a174eda2
-                break;
-            case 8:
-                System.out.println("Ingresa un numero entero entre 0 y 20");
-                int numeroFactorial = entrada.nextInt();
 
-                if (numeroFactorial < 0) {
-                    System.out.println("El factorial no existe para numeros negativos");
-                } else if (numeroFactorial > 20) {
-                    System.out.println("El numero es demasiado grande para un resultado exacto en tipo long");
-                } else {
-                    System.out.println("El factorial de " + numeroFactorial + " es: " + factorial(numeroFactorial));
-                }
-                break;
-            case 9:
-<<<<<<< HEAD
-                System.out.println("Que figura deseas dibujar");
-                System.out.println("1.- Triangulo");
-                System.out.println("2.- Rombo");
-                int opcionDibujo = entrada.nextInt();
-
-                switch (opcionDibujo) {
-                    case 1:
-                        System.out.println("Ingresa la altura del triangulo");
-                        int alturaTrianguloDibujo = entrada.nextInt();
-
-                        if (alturaTrianguloDibujo < 1) {
-                            System.out.println("La altura debe ser mayor o igual a 1");
-                        } else {
-                            dibujarTrianguloEquilatero(alturaTrianguloDibujo);
-                        }
-                        break;
-                    case 2:
-                        System.out.println("Ingresa la diagonal mayor del rombo (impar y mayor o igual a 3)");
-                        int diagonalRombo = entrada.nextInt();
-
-                        if (diagonalRombo < 3 || diagonalRombo % 2 == 0) {
-                            System.out.println("La diagonal debe ser impar y mayor o igual a 3");
-                        } else {
-                            dibujarRombo(diagonalRombo);
-                        }
-                        break;
-                    default:
-                        System.out.println("Opcion de dibujo no valida");
-                        break;
-=======
-                System.out.println("Camos a realizar el dibujo en un cuadrado magico");
-                System.out.println("Infrese le tamaño de su cuadrado ");
-                int n1=entrada.nextInt();
-
-                if(n1 >=1 && n1 <=20){
-                    //se imprime
-                    System.out.println(" 1 ");
-                    for(int j = 1; j<=n1; j++){
-                        System.out.println("*");
-                        
-                    }
-                    System.out.println("");
-                }else{System.out.println("Por favor solo ingrese valores entre el 1 y el 20 ");
-                break;
-
->>>>>>> b97aa648ed065f6ee6df5e4773657911a174eda2
-                }
-                break;
-            case 10:
-                System.out.println("Figura hueca");
-                System.out.println("1.- Cuadrado hueco");
-                System.out.println("2.- Rectangulo hueco");
-                int opcionFiguraHueca = entrada.nextInt();
-
-                switch (opcionFiguraHueca) {
-                    case 1:
-                        System.out.println("Ingresa el lado del cuadrado");
-                        int ladoCuadradoHueco = entrada.nextInt();
-
-                        if (ladoCuadradoHueco < 2) {
-                            System.out.println("El lado debe ser mayor o igual a 2");
-                        } else {
-                            dibujarRectanguloHueco(ladoCuadradoHueco, ladoCuadradoHueco);
-                        }
-                        break;
-                    case 2:
-                        System.out.println("Ingresa el ancho del rectangulo");
-                        int anchoRectanguloHueco = entrada.nextInt();
-                        System.out.println("Ingresa el alto del rectangulo");
-                        int altoRectanguloHueco = entrada.nextInt();
-
-                        if (anchoRectanguloHueco < 2 || altoRectanguloHueco < 2) {
-                            System.out.println("El ancho y el alto deben ser mayores o iguales a 2");
-                        } else {
-                            dibujarRectanguloHueco(anchoRectanguloHueco, altoRectanguloHueco);
-                        }
-                        break;
-                    default:
-                        System.out.println("Opcion de figura no valida");
-                        break;
-                }
-                break;
             case 11:
-                System.out.println("Patrones (1: escalera, 2: piramide invertida)");
-                int opPat = entrada.nextInt();
-                if(opPat == 1){
-                    for(int i=1; i<=5; i++){
-                        for(int j=1; j<=i; j++) System.out.print("#");
-                        System.out.println();
-                    }
-                } else {
-                    for(int i=5; i>=1; i--){
-                        for(int j=1; j<=i; j++) System.out.print("#");
-                        System.out.println();
-                    }
+                System.out.println("Patrones disponibles:");
+                System.out.println("1.- Triangulo rectangulo");
+                System.out.println("2.- Rombo");
+                System.out.println("3.- Piramide");
+                int opcionPatron = entrada.nextInt();
+                System.out.println("Ingrese tamaño (entero positivo)");
+                int tamPatron = entrada.nextInt();
+
+                if (tamPatron < 1) {
+                    System.out.println("Tamaño debe ser mayor a 0");
+                    break;
+                }
+
+                switch (opcionPatron) {
+                    case 1:
+                        for (int i = 1; i <= tamPatron; i++) {
+                            for (int j = 1; j <= i; j++) {
+                                System.out.print("*");
+                            }
+                            System.out.println();
+                        }
+                        break;
+                    case 2:
+                        for (int i = 1; i <= tamPatron; i++) {
+                            for (int j = 0; j < tamPatron - i; j++) System.out.print(" ");
+                            for (int j = 0; j < 2 * i - 1; j++) System.out.print("*");
+                            System.out.println();
+                        }
+                        for (int i = tamPatron - 1; i >= 1; i--) {
+                            for (int j = 0; j < tamPatron - i; j++) System.out.print(" ");
+                            for (int j = 0; j < 2 * i - 1; j++) System.out.print("*");
+                            System.out.println();
+                        }
+                        break;
+                    case 3:
+                        for (int i = 1; i <= tamPatron; i++) {
+                            for (int j = 0; j < tamPatron - i; j++) System.out.print(" ");
+                            for (int j = 0; j < 2 * i - 1; j++) System.out.print("*");
+                            System.out.println();
+                        }
+                        break;
+                    default:
+                        System.out.println("Opcion de patrón no valida");
+                        break;
                 }
                 break;
             case 12:
@@ -465,11 +384,9 @@ public class EstructuraDatos {
                     System.out.println("Resultado: " + total);
                 }
                 break;
-            case 14:
-                System.out.println("Saliendo...");
-                return;
+
             default:
-                System.out.println("Opcion no valida");
+                System.out.println("Opcion invalida. Elija una opcion entre 1 y 14");
                 break;
         }
         System.out.println("Deseas repetir el programa escribe s o S para si ");
@@ -477,61 +394,5 @@ public class EstructuraDatos {
     }while(letrapararepetir == 's' || letrapararepetir == 'S');
     
 
-    }
-
-    public static long factorial(int n) {
-        if (n <= 1) {
-            return 1;
-        }
-        return n * factorial(n - 1);
-    }
-
-    public static void dibujarTrianguloEquilatero(int altura) {
-        for (int i = 1; i <= altura; i++) {
-            for (int j = 0; j < altura - i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < i; j++) {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
-    }
-
-    public static void dibujarRombo(int diagonal) {
-        int mitad = diagonal / 2;
-
-        for (int i = 0; i <= mitad; i++) {
-            for (int j = 0; j < mitad - i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < (2 * i) + 1; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-
-        for (int i = mitad - 1; i >= 0; i--) {
-            for (int j = 0; j < mitad - i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < (2 * i) + 1; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-
-    public static void dibujarRectanguloHueco(int ancho, int alto) {
-        for (int i = 1; i <= alto; i++) {
-            for (int j = 1; j <= ancho; j++) {
-                if (i == 1 || i == alto || j == 1 || j == ancho) {
-                    System.out.print("* ");
-                } else {
-                    System.out.print("  ");
-                }
-            }
-            System.out.println();
-        }
     }
 }

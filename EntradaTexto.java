@@ -1,3 +1,8 @@
+/* 
+Vamos a crear una instancia de un objeto para la entrada de datos estandar y la salida de datos
+*/
+
+//libreria Scanner
 import java.util.Scanner;
 
 class EntradaTexto {
