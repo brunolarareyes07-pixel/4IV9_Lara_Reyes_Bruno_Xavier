@@ -278,6 +278,7 @@ public class EstructuraDatos {
 
                 break;
             case 7:
+<<<<<<< HEAD
                 System.out.println("Tabla de multiplicar");
                 System.out.println("Ingresa el numero base de la tabla");
                 int numeroTabla = entrada.nextInt();
@@ -291,6 +292,14 @@ public class EstructuraDatos {
                         System.out.println(numeroTabla + " x " + i + " = " + (numeroTabla * i));
                     }
                 }
+=======
+                //quiero dejarles una tabla de multiplicar
+                //deberan de darle formato y titulos a cada columna
+                for(int n = 1; n <= 10; n++){
+                    System.out.println("| " + n + "|" + " " + "|"+ (n*10 + "|" + "" + (n*100) + "|" + " " + (n*1000)+ "|"));
+                }
+                
+>>>>>>> b97aa648ed065f6ee6df5e4773657911a174eda2
                 break;
             case 8:
                 System.out.println("Ingresa un numero entero entre 0 y 20");
@@ -305,6 +314,7 @@ public class EstructuraDatos {
                 }
                 break;
             case 9:
+<<<<<<< HEAD
                 System.out.println("Que figura deseas dibujar");
                 System.out.println("1.- Triangulo");
                 System.out.println("2.- Rombo");
@@ -334,6 +344,23 @@ public class EstructuraDatos {
                     default:
                         System.out.println("Opcion de dibujo no valida");
                         break;
+=======
+                System.out.println("Camos a realizar el dibujo en un cuadrado magico");
+                System.out.println("Infrese le tamaño de su cuadrado ");
+                int n1=entrada.nextInt();
+
+                if(n1 >=1 && n1 <=20){
+                    //se imprime
+                    System.out.println(" 1 ");
+                    for(int j = 1; j<=n1; j++){
+                        System.out.println("*");
+                        
+                    }
+                    System.out.println("");
+                }else{System.out.println("Por favor solo ingrese valores entre el 1 y el 20 ");
+                break;
+
+>>>>>>> b97aa648ed065f6ee6df5e4773657911a174eda2
                 }
                 break;
             case 10:
