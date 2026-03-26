@@ -13,11 +13,13 @@ class EntradaTexto {
         String nombre;
         int edad;
         System.out.println("Escribe tu nombre");
-        nombre = System.console().readLine();
+        nombre = scanner.nextLine();
 
         System.out.println("Hola " + nombre + ", Bienvenido a programar muy feo");
         
         System.out.println("Escribe tu edad");
         edad = scanner.nextInt();
+        System.out.println("Tu edad es: " + edad);
+        scanner.close();
     }
 }

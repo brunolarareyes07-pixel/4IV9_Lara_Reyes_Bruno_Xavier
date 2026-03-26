@@ -21,7 +21,7 @@ public class EstructuraDatos {
     public static void main(String[] args) {
         //aqui van los objetos 
         int opcion;
-        char letrapararepetir;
+        char letrapararepetir = 'n';
         //aqio van los objetos
         Scanner entrada = new Scanner(System.in);
         //aqui va el menu 
@@ -302,7 +302,7 @@ public class EstructuraDatos {
         case 8:
             System.out.println("Ingresa un numero entero entre 0 y 20");
             int numeroFactorial = entrada.nextInt();
-                        int factorial = 1;
+            long factorial = 1;
             if (numeroFactorial < 0) {
                 System.out.println("El factorial no existe para numeros negativos");
             } else if (numeroFactorial > 20) {
@@ -464,18 +464,27 @@ public class EstructuraDatos {
                                 i = cantidadNums; // salir loop
                                 break;
                         }
-                    }
+                }
+                if (op == '+' || op == '-' || op == '*' || op == '/') {
                     System.out.println("Resultado: " + total);
                 }
+                }
+                break;
+            case 14:
+                letrapararepetir = 'n';
+                System.out.println("Saliendo del programa.");
                 break;
 
             default:
                 System.out.println("Opcion invalida. Elija una opcion entre 1 y 14");
                 break;
         }
-        System.out.println("Deseas repetir el programa escribe s o S para si ");
-        letrapararepetir = entrada.next().charAt(0); 
+        if (opcion != 14) {
+            System.out.println("Deseas repetir el programa escribe s o S para si ");
+            letrapararepetir = entrada.next().charAt(0);
+        }
     }while(letrapararepetir == 's' || letrapararepetir == 'S');
+    entrada.close();
     }
     
     // Método para dibujar rectángulo hueco
