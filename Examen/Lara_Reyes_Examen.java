@@ -15,7 +15,7 @@ public class Lara_Reyes_Examen {
     private static final double PRECIO_MARMOLEADO = 34.27;
     private static final double PRECIO_ACRILICO = 22.94;
 
-    private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/uuuu").withResolverStyle(ResolverStyle.STRICT);
+    private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy").withResolverStyle(ResolverStyle.STRICT);
 
     private static String nombre;
     private static String apellidoPaterno;
@@ -42,23 +42,12 @@ public class Lara_Reyes_Examen {
             mostrarMenu();
             opcion = leerEntero("Seleccione una opcion: ");
             switch (opcion) {
-                case 1:
-                    ingresarDatosComprador();
-                    break;
-                case 2:
-                    visualizarTiposPiso();
-                    break;
-                case 3:
-                    cotizarCompra();
-                    break;
-                case 4:
-                    realizarCompra();
-                    break;
-                case 5:
-                    System.out.println("Saliendo del programa...");
-                    break;
-                default:
-                    System.out.println("Opcion no valida, intente de nuevo.");
+                case 1 -> ingresarDatosComprador();
+                case 2 -> visualizarTiposPiso();
+                case 3 -> cotizarCompra();
+                case 4 -> realizarCompra();
+                case 5 -> System.out.println("Saliendo del programa...");
+                default -> System.out.println("Opcion no valida, intente de nuevo.");
             }
             System.out.println();
         } while (opcion != 5);
